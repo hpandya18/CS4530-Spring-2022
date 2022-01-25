@@ -1,0 +1,494 @@
+{"0": {
+    "doc": "Announcements",
+    "title": "Announcements",
+    "content": "Announcements are stored in the _announcements directory and rendered according to the layout file, _layouts/announcement.html. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/announcements/",
+    "relUrl": "/announcements/"
+  },"1": {
+    "doc": "Announcements",
+    "title": "Welcome to CS4530, Spring 2022",
+    "content": "Nov 16 &middot; 1 min read On behalf of the entire instructional team (all 4 instructors and 18 TAs), welcome to the Spring 2022 edition of CS 4530! This website will contain all of the lectures, assignments and tutorials for the class. Our Canvas site contains your gradebook, as well as single-sign-on links to Piazza (for discussion), GradeScope (for submitting assignments), details of office hours, and replicates much of the material on the class website. In advance of the first week of class, we’ve shared the first class module and the first homework assignment. You should feel free to take a look now if you are eager, but if you are still enjoying the last moments of your winter break, then you’ll be no worse off to wait to look at this material until the class begins. We are excited to meet you all next week! . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/announcements/",
+    "relUrl": "/announcements/"
+  },"2": {
+    "doc": "Announcements",
+    "title": "Initial Website Launched &amp; Registration Information",
+    "content": "Nov 16 &middot; 1 min read Welcome to the course website for CS4530, Spring 2022! Over the coming weeks, we will be populating this website (and Canvas) with more information about the course. We understand that all five sections filled up very quickly, and that there are many students who would like to register for the class, but were not able to. If you must take this course this semester to graduate, please reach out to your academic advisor ASAP. The CS advisors have plans to help ensure that students who must take this class in order to graduate this semester will still be able to graduate in time. We (the instructors) do not have any ability to over-enroll our sections. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/announcements/",
+    "relUrl": "/announcements/"
+  },"3": {
+    "doc": "Assignments",
+    "title": "Assignments",
+    "content": " ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/assignments/",
+    "relUrl": "/assignments/"
+  },"4": {
+    "doc": "Assignment 1: Venusians",
+    "title": "Objectives of this Assignment",
+    "content": "The objectives for this first assignment are to: . | get you familiar with the basics of Typescript and the VSC/npm ecosystem. | have you re-acquaint yourself with the basics of object-oriented programming, such as classes and objects. | learn to write new code in TypeScript. | . Your assignment will be graded following the rubric embedded in this document. Based on past experiences, we project that this assignment could take you up to 14 hours (depending on your prior preparation). We encourage you to start early so that you can post questions on Piazza, make the most use of our TAs’ tutorials, and attend office hours as necessary in order to ensure that you can reach Satisfactory marks across the board. This is an individual assignment. Please post any questions about this assignment on Piazza. We have many sections of this class, and we want to make sure that we respond to your questions the same way, regardless of which section you are in. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/assignments/hw1#objectives-of-this-assignment",
+    "relUrl": "/assignments/hw1#objectives-of-this-assignment"
+  },"5": {
+    "doc": "Assignment 1: Venusians",
+    "title": "Problem Statement",
+    "content": "Mars is being invaded by Venusians. Here’s a description of the Venusian fleet: . | Each ship has a serial number, a crew, which is a list of Venusians, and a possibly-empty set of daughter ships, each of which is a ship. | Each Venusian has a name, which is a string, and a VSN (Venusian Security Number), which is a number. | When we say “fleet”, we mean a list of ships and their daughters, their daughters’ daughters, etc. | When we say the “fleet of a ship”, we mean the fleet consisting of its daughters. | . EXAMPLE: if ship 1 has daughters ship 11 and ship 12, and ship 11 has daughters 111 and 112, and ship 112 has daughters 1121 and 1122, and none of these ships has any other daughters, then the fleet of ship 1 consists of 1, 11, 12, 111, 112, 1121, and 1122 . Your task is to define TypeScript class Venusian and Ship as follows: . | The class Venusian has a contructor new Venusian(name:string) that returns a Venusian with the given name and a unique VSN. By “unique”, we mean that while your program is running, it must never re-use a VSN. It is OK for your program to re-use the same VSNs if you stop the program and run it again (it need not be a “globally unique” identifier). Venusian names are case-senstive. The class Venusian has the following public methods: . | getName():string returns the name of the Venusian. | getVsn():number returns the VSN of the given Venusian | . | The class Ship has a constructor new Ship(crew:Venusian[], daughters:Ship[]) that returns a ship with the given crew, the given daughters, and a unique serial number (similar to VSNs, the serial number need not be globally unique). The class Ship has the following public methods: . | getCrew():Venusian[] returns the crew of the ship. | getDaughters():Ship[] returns the daughters of the ship. | getSerialNumber():number returns the serial number of the ship | hasWaldo():boolean returns true iff the ship has one or more crew members named Waldo. | totalWaldos():number returns the number of Venusians named “Waldo” that are in the ship or its fleet. Venusians can be in two places at once, so if two Waldos have same VSN, you should count them twice. | removeWaldos():void removes any Venusians named “Waldo” from the crew of the ship. | removeDeepWaldos():void removes any Venusians named Waldo from the crews of the given ship and its fleet. | fleetHasDuplicates():boolean It has come to the attention of the Venusian fleet command that some shipbuilders have been cheating by putting multiple ships with the same serial number in the fleets of their ships. Given a ship, determines whether there are any duplicates among the ship and its fleet. The duplicates may occur anywhere in the ship and its fleet.` | . | . EXAMPLE: in the example above, there are no duplicates. If ship 12 were added to the daughters of ship 111, that would be a duplicate, and applying this function to ship 1 would return true. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/assignments/hw1#problem-statement",
+    "relUrl": "/assignments/hw1#problem-statement"
+  },"6": {
+    "doc": "Assignment 1: Venusians",
+    "title": "Starter Code and Details",
+    "content": "We will supply you with starter code in hw1.zip. Getting Started . | Download and unpack hw1.zip in a fresh directory. You should have a directory hw1-handout containing package.json, src/ and a bunch of other files. | Open hw1-handout in VSCode. | Open up the VSCode terminal with ctrl + ~. Alternatively, you can also open a seperate terminal/cmd. Please make sure the shell is in the same folder as your package.json. | Fetch all the necessary dependancies by running npm install. You may not install additional third-party libraries to use in your code beyond what is included in the handout - we will grade your code using the package.json distributed in the handout. | The package also includes some basic sanity tests, which you can run by saying npm test. | . To help you set up a local development environment for this class, we’ve prepared a tutorial for setting up a development environment with NodeJS, VSCode and TypeScript. Additionally, An Absolute Beginner’s Guide to Using npm can help you in getting acquainted with npm. As a reference for getting started with TypeScript, we suggest the book “Programming TypeScript” by Boris Cherny. You can read this and many other tech books for free via Northeastern’s Libraries - follow the instructions on the course textbooks page. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/assignments/hw1#starter-code-and-details",
+    "relUrl": "/assignments/hw1#starter-code-and-details"
+  },"7": {
+    "doc": "Assignment 1: Venusians",
+    "title": "Rubric",
+    "content": "Your code will be evaluated by automated testing in Gradescope. It will be judged for style using a linter with parameters set in the starter code that we will supply you. Your code must have no linter errors or warnings in order for it to receive any grade. Please note that you can check for linter issues before submitting by running npm run lint; many formatting issues can also be automatically fixed by running npm run format. If your code has no linter errors or warnings, then for each of the 10 methods listed above, you will receive a numeric score of: . | 2 (Satisfactory) | 1 (Meets minimum expecations) | 0 (Not passing) | . We have provided between one and three tests on Gradescope to check each of the ten functions that you have been asked to implement. For each function, the requirements for each of these grades are: . Satisfactory . | Have no errors or warnings reported by the linter | Passes all of the Gradescope tests for this function | . Meets minimum expectations . | Have no errors or warnings reported by the linter | Fails no more than one of the Gradescope tests for this function (while also passing at least one) | . Not Passing . | Does not meet the minimum expectations. | . When we say “no errors reported by the linter”, we mean the following: . | Have no style errors (may have warnings) as reported by npm run-script lint . | Have no @ts-ignore or eslint-disable annotations in the code that you write. | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/assignments/hw1#rubric",
+    "relUrl": "/assignments/hw1#rubric"
+  },"8": {
+    "doc": "Assignment 1: Venusians",
+    "title": "Submission Instructions",
+    "content": "Submit your assignment in GradeScope. The easiest way to get into GradeScope the first time is to first sign into Canvas and then click the link on our course for “GradeScope”. You should then also have the option to create an account on GradeScope (if you don’t already have one) so that you can log in to GradeScope directly. Please contact the instructors immediately if you have difficulty accessing the course on GradeScope. Submit your solution to Gradescope in the form of exactly two files, Venusian.ts and Ship.ts. Before submitting, be sure your code passes the sanity tests included in the starter package. GradeScope will provide you with feedback on your submission, providing a numeric score between 0 and 20. You will be able to view the complete output from running the tests and linter on GradeScope. If you have any doubts about the autograder, please contact the course staff immediately. In particular, if you are not able to reproduce and debug test or linter failures on your local machine, please ask the TAs for assistance: otherwise you’ll waste an immense amount of time waiting for the autograder to complete, when you could get the same feedback in seconds running the tests + linter locally. You may submit solutions as many times as you want; only the last submission before the deadline will be counted. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/assignments/hw1#submission-instructions",
+    "relUrl": "/assignments/hw1#submission-instructions"
+  },"9": {
+    "doc": "Assignment 1: Venusians",
+    "title": "Assignment 1: Venusians",
+    "content": "Change Log . | 1/13/22: Initial Release | 1/16/22: Add pointer to textbooks page - JB | 1/18/22: Specify return types on Venusian class, and clarify that Venusian names are case-sensitive - JB | 1/19/22: Update spec for Venusian to clarify captialization of the member method getVsn, to match the test included in the handout. -JB | 1/19/22: Added a “Getting Started” section to help set up the development environment for the starter code locally. -SR | 1/20/22: Clarify that unique ID’s need only be unique for a single execution of your program and need not be globally unique IDs. -JB | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/assignments/hw1",
+    "relUrl": "/assignments/hw1"
+  },"10": {
+    "doc": "CS4530, Spring 2022",
+    "title": "CS4530, Spring 2022: Fundamentals of Software Engineering",
+    "content": " ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/#cs4530-spring-2022-fundamentals-of-software-engineering",
+    "relUrl": "/#cs4530-spring-2022-fundamentals-of-software-engineering"
+  },"11": {
+    "doc": "CS4530, Spring 2022",
+    "title": "Welcome to CS4530, Spring 2022",
+    "content": "Nov 16 &middot; 1 min read On behalf of the entire instructional team (all 4 instructors and 18 TAs), welcome to the Spring 2022 edition of CS 4530! This website will contain all of the lectures, assignments and tutorials for the class. Our Canvas site contains your gradebook, as well as single-sign-on links to Piazza (for discussion), GradeScope (for submitting assignments), details of office hours, and replicates much of the material on the class website. In advance of the first week of class, we’ve shared the first class module and the first homework assignment. You should feel free to take a look now if you are eager, but if you are still enjoying the last moments of your winter break, then you’ll be no worse off to wait to look at this material until the class begins. We are excited to meet you all next week! . Announcements . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/",
+    "relUrl": "/"
+  },"12": {
+    "doc": "CS4530, Spring 2022",
+    "title": "Overview",
+    "content": "Building, delivering and maintaining successful software products requires more than being good at programming. Software engineering encompasses the tools and processes that we use to design, construct and maintain programs over time. Software engineering has been said to consider the “multi person development of multi version programs.” Development processes that work well for a single developer do not scale to large or even medium-sized teams. Similarly, development processes that work well for quickly delivering a one-off program to a client cause chaos when applied to a codebase that needs to be maintained and updated over months and years. This class will begin to explore these tradeoffs throughout the entire software development lifecycle, with a particular focus on how these decisions affect the quality of the resulting software. This class will serve as an introduction to the field of software engineering, covering key topics such as: . | Requirements gathering and specification How to make sure that you build the product that your customer really wants | Designing code for reuse, for readability, and for scale How to avoid reinventing the wheel? What makes code readable? Where does performance fit into designs? When do we decide when to revisit old design decisions, and how do we replace them? Can we avoid the mistakes that past developers have made? | How to organize your development process to collaborate effectively How do we communicate our designs with others? How do we structure and coordinate development activities? How do we measure the performance of these processes, and tweak them over time? | How to ensure that your code works, is secure, and broadly speaking, “does the right thing” How do we measure different quality attributes like usability, scalability and performance? How do we minimize the cost of defects? How do we automatically test complex systems? Can we automatically prove the absence of some kinds of defects? | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/#overview",
+    "relUrl": "/#overview"
+  },"13": {
+    "doc": "CS4530, Spring 2022",
+    "title": "Course Outcomes",
+    "content": ". | Students will be able to define and describe the phases of the software engineering lifecycle (requirements, design, implementation, testing, deployment, maintenance) | Students will be able to explain the role of key processes and technologies in modern software development. | Students will be able to productively apply instances of major tools used in elementary SE tasks. | Students will design and implement a portfolio-worthy software engineering project in a small team environment that can be publicly showcased to recruiters. | . Course Delivery . The course will be delivered in a “traditional” lecture style. Prof Wand’s section will be entirely virtual, and the other sections will be entirely on-the-ground, with no virtual participation option. You must attend the section for which you have registered, and you may not partner with students in other sections for the term project. | Section | Instructor | Meeting Time | Meeting Place | . | 1 | Prof Bhutta | MR 11:45 am - 1:25 pm | West Village H 110 | . | 2 | Prof Bell | MR 11:45 am - 1:25 pm | West Village G 108 | . | 3 | Prof Bhutta | MW 2:50 pm - 4:30 pm | Shillman Hall 220 | . | 4 | Prof Vesely | TF 8:00 am - 9:40 am | Robinson Hall 411 | . | 5 | Prof Wand | W 6:00 pm - 9:20 pm | Online | . | 6 | Prof Bhutta | T 11:45 am - 1:25pmR 2:50 pm - 4:30 pm | Knowles Center 010 | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/#course-outcomes",
+    "relUrl": "/#course-outcomes"
+  },"14": {
+    "doc": "CS4530, Spring 2022",
+    "title": "Course Project",
+    "content": "The assignments and project for this class are designed to mirror the experiences of a software engineer joining a new development team: you will be “onboarded” to our codebase, make several individual contributions, and then form a team to propose, develop and implement a new feature. The codebase that we’ll be developing on is a remote collaboration tool called Covey.Town. Covey.Town provides a virtual meeting space where different groups of people can have simultaneous video calls, allowing participants to drift between different conversations, just like in real life. Covey.Town is inspired by existing products like Gather.Town, Sococo, and Gatherly.IO — but it is an open source effort, and the features will be proposed and implemented by you! All implementation will take place in the TypeScript programming language, using React for the user interface. At the end of the semester, the instructors and TAs will evaluate all of the student projects, and select the best (in terms of usability, code quality, test suite quality, and overall design) to merge into the open source Covey.Town codebase on GitHub repository. No additional course credit will be awarded to these teams, but these students will have the opportunity to receive public recognition for their project (in the form of a pull request merged into our repository and acknowledgements in the project’s contributors list). The project will provide hands-on experience to complement the skills taught in this class, requiring students to be able to: . | Work effectively in a small team | Enumerate and prioritize development tasks | Propose, design, implement and test a new feature in an existing non-toy software application | Write code that their team members can read and review | Review teammates’ code | Analyze a proposed software architecture | Use relevant software tools, such as: . | TypeScript | Visual Studio Code (or similar IDE) | Git | Mocha and Jest | Twilio’s Programmable Video API | Postman | . | . Select projects from Spring 2021 are hosted in our project showcase. Acknowledgements . This class and its contents were inspired by Software Engineering courses at various institutions, including: . | Columbia’s Software Engineering Course, COMS W4156 | CMU’s Software Engineering Course, 17-313 | GMU’s Web App Development Course, SWE 432 | NCSU’s Software Engineering Course, CSC 326 and its iTrust term project, also Chris Parnin’s DevOps course. | Past iterations of CS5500 at Northeastern, as prepared by Mike Weintraub, Mike Shah, and Frank Tip. | . This website is built using Kevin Lin’s Just the Class Jekyll template. The term project, Covey.Town, is built using code from the Clowdr open source project. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/#course-project",
+    "relUrl": "/#course-project"
+  },"15": {
+    "doc": "CS4530, Spring 2022",
+    "title": "CS4530, Spring 2022",
+    "content": " ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/",
+    "relUrl": "/"
+  },"16": {
+    "doc": "Modules",
+    "title": "Modules",
+    "content": " ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/modules/",
+    "relUrl": "/modules/"
+  },"17": {
+    "doc": "Policies",
+    "title": "Homework policy",
+    "content": "Students must work individually on all homework assignments. We encourage you to have high-level discussions with other students in the class about the assignments, however, we require that when you turn in an assignment, it is only your work. That is, copying any part of another student’s assignment is strictly prohibited, and repercussions for doing so will be severe (up to and including failing the class outright). You are free to reuse small snippets of example code found on the Internet (e.g. via StackOverflow) provided that it is attributed. If you are concerned that by reusing and attributing that copied code it may appear that you didn’t complete the assignment yourself, then please raise a discussion with the instructor. Your work is late if it is not turned in by the deadline. | 10% will be deducted for late assignments turned in within 24 hours after the due date. | Assignments submitted more than 24 hours late will receive a zero. | . If you’re worried about being busy around the time of a HW submission, please plan ahead and get started early. Homework that does not compile or run will receive at most 50% credit. For fairness to all, there are no exceptions to the above rules. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/policies/#homework-policy",
+    "relUrl": "/policies/#homework-policy"
+  },"18": {
+    "doc": "Policies",
+    "title": "In Class Activities:",
+    "content": "Most lectures will feature interactive activities and/or polls that support the material being presented. You must be present in class to complete the activity or take the poll (participating in an online activity while not attending the synchronous session will be considered academic dishonesty and will be treated harshly). Each instructor may have a different style for assigning participation grades, but historical grading information suggests that each style results in a similar overall grade distribution. Participation grades will be posted on Canvas, and regularly updated. If you join class in person, you are strongly encouraged to bring your laptop or phone to class so that you can participate in the activities. Policy on remote attendance . We would like to provide the best and most comfortable learning experience, and encourage you to stay at home if you are ill, and upon request, will provide remote access to our classes. We are following guidance and regulations set by the Provost’s office. In short: if you are registered for an on-the-ground section but do not feel comfortable or are unable to attend in person for a short duration (e.g. one or two weeks) due to either your illness or heightened concern for your or your roommates/family’s health, we will provide access to attend class those weeks remotely. However, we have been asked to be extremely attentive that we only provide this access for a maximum of two weeks. If you anticipate being unable to attend class in person for more than two weeks, please reach out to the Disability Resource Center, which is coordinating a process to provide longer-term access to remote resources. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/policies/#in-class-activities",
+    "relUrl": "/policies/#in-class-activities"
+  },"19": {
+    "doc": "Policies",
+    "title": "Grading",
+    "content": "There will be four programming assignments and a final project. You will complete the assignments individually, and the project in a group of 3-4. The overall grading breakdown is: . | 35% Individual homework assignments | 35% Team final project | 10% Participation in synchronous, in-class activities | 20% Exam | . Assignment of final grades: Although each instructor will use the same lesson plans and assignments, we expect that there may be variation in grades when compared between sections. Hence, each instructor will assign final grades to students in their sections, and reserve the right to apply different curves than are used by the other instructors. With each graded assignment, students will be provided with the distribution of all grades in their section. Grading grievances: If you have concerns regarding the grading of your work, please let us know right away by opening a regrade request in GradeScope. Do not post on Piazza or your TA or instructor: GradeScope provides an interface that allows us to review all regrade requests in one place. All regrade requests must be submitted within 7 days from your receipt of the graded work. If your regrade request is closed and you feel that the response was not satisfactory, you may appeal to the instructor via email within 48 hours. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/policies/#grading",
+    "relUrl": "/policies/#grading"
+  },"20": {
+    "doc": "Policies",
+    "title": "Classroom Environment",
+    "content": "To create and preserve a classroom atmosphere that optimizes teaching and learning, all participants share a responsibility in creating a civil and non-disruptive forum for the discussion of ideas. Students are expected to conduct themselves at all times in a manner that does not disrupt teaching or learning. Your comments to others should be constructive and free from harassing statements. You are encouraged to disagree with other students and the instructor, but such disagreements need to respectful and be based upon facts and documentation (rather than prejudices and personalities). The instructors reserve the right to interrupt conversations that deviate from these expectations. Repeated unprofessional or disrespectful conduct may result in a lower grade or more severe consequences. Part of the learning process in this course is respectful engagement of ideas with others. Please don’t be late. You are an essential part of the class. Your participation is an essential part of the class. If you are late, please be courteous to others when entering. BE PRESENT WHEN YOU ARE ATTENDING CLASS. Please do not distract yourself from the class by doing other activities such as phone calls, email, facebook, chat/IM/texting, games, web surfing – unless it has a direct bearing on the course. Then, by all means, surf away! . Attendance in the synchronous meetings is expected. Sometimes you cannot avoid missing a class. If you need to be away from class, it is your responsibility to catch up on the materials discussed in the class. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/policies/#classroom-environment",
+    "relUrl": "/policies/#classroom-environment"
+  },"21": {
+    "doc": "Policies",
+    "title": "Accommodations for Disabilities",
+    "content": "Students who have disabilities who wish to receive academic services and/or accommodations should visit the Disability Resource Center at 20 Dodge Hall or call (617) 373-2675. If you have already done so, please provide your letter from the DRC to the Instructor early in the semester so that they can arrange those accommodations. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/policies/#accommodations-for-disabilities",
+    "relUrl": "/policies/#accommodations-for-disabilities"
+  },"22": {
+    "doc": "Policies",
+    "title": "Title IX Notice",
+    "content": "Title IX of the Education Amendments of 1972 protects individuals from sex or gender-based discrimination, including discrimination based on gender-identity, in educational programs and activities that receive federal financial assistance. Northeastern’s Title IX Policy prohibits Prohibited Offenses, which are defined as sexual harassment, sexual assault, relationship or domestic violence, and stalking. The Title IX Policy applies to the entire community, including students, faculty and staff of all gender identities. If you or someone you know has been a survivor of a Prohibited Offense, confidential support and guidance can be found through University Health and Counseling Services staff and the Center for Spiritual Dialogue and Service clergy members. By law, those employees are not required to report allegations of sex or gender-based discrimination to the University. Alleged violations can be reported non-confidentially to the Title IX Coordinator within The Office for Gender Equity and Compliance at: titleix@northeastern.edu and/or through NUPD (Emergency 617.373.3333; Non-Emergency 617.373.2121). Reporting Prohibited Offenses to NUPD does NOT commit the victim/affected party to future legal action. Faculty members are considered “responsible employees” at Northeastern University, meaning they are required to report all allegations of sex or gender-based discrimination to the Title IX Coordinator. In case of an emergency, please call 911. Please visit www.northeastern.edu/ouec for a complete list of reporting options and resources both on- and off-campus. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/policies/#title-ix-notice",
+    "relUrl": "/policies/#title-ix-notice"
+  },"23": {
+    "doc": "Policies",
+    "title": "Policies",
+    "content": " ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/policies/",
+    "relUrl": "/policies/"
+  },"24": {
+    "doc": "Other Resources",
+    "title": "Other Resources",
+    "content": "There are many articles, blogs, books and podcasts that are very interesting for more reading on the topics discussed in class. We’ll update this list as the semester goes, and if you have suggestions of materials to share, please let us know and we’ll add it to the list. Podcasts . The Software Engineering Radio podcast (also available wherever you get your podcasts) aims to produce educational material for professional softare developers, and includes conversations between experts and researchers on various software engineering topics. Here are a few of our favorites that are most relevant to topics that we cover in this class: . | Donny Nadolny on Debugging Distributed Systems, with Robert Blumen, 2017 | Jafar Soltani on Continuous Delivery for Multiplayer Games, with Nate Black, 2018 | Chris Richardson on Microservice Patterns, with Robert Blumen, 2019 | Margaret Burnett on Gender, Cognitive Styles and Usability Bugs, with Felienne Hermans, 2019 | Michaela Greiler on Code Reviews, with Felienne Hermans, 2020 | Ipek Ozkaya on Managing Technical Debt, 2021 | . Code style . | Research paper: To camelcase or under_score, Dave Binkley et al | Book (free via library): “Refactoring: Improving the Design of Existing Code” By Martin Fowler The definitive list of “code smells” that should be avoiding in programming, matched up with “refactoring” techniques to improve that code | . Debugging . | Book (free via library): “Effective Debugging: 66 Specific Ways to Debug Software and Systems” by Diomidis SpinellisA helpful guidebook for debugging, laying out different strategies that are effective for testing different kinds of debugging hypotheses. | . Design Patterns . | Book (free via library): “Design Patterns Explained: A New Perspective on Object-Oriented Design” by Alan Shalloway and James TrottIn-depth coverage of design patterns, considering why they are important in software development, how to apply them, and descriptions of some common patterns. | Book (free via library): “Refactoring to Patterns” by Joshua KerievskyA unification of the classic Gang of Four Design Patterns work with Fowler’s refactoring work, with practical example of how to introduce patterns into existing code bases to improve code quality. | “Fundamentals of Software Architecture” By Mark Richards and Neal Ford An overview of software architectural patterns and their role in successful software projects. | . Infrastructure + Operations . | Book (free via library) “Site Reliability Engineering” By Betsy Beyer, Chris Jones, Niall Richard Murphy, Jennifer Petoff Site Reliability Engineering is a topic very related to software engineering: while software engineers might focus primarily on the design and development of software systems, SRE’s are engineers who focus on the deployment, monitoring and maintenance of that software. This book documents the SRE practices at Google. | . JavaScript . | Book (free via library): “Modern JavaScript for the Impatient” by Cay Horstmann | . Program Understanding . | Book: “The Programmer’s Brain” by Felienne Hermans) A survey of research on programming and cognition, covering topics such as how to read code more effectively and how to write code that is easier to read and share. | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/resources/",
+    "relUrl": "/resources/"
+  },"25": {
+    "doc": "Calendar",
+    "title": "Calendar",
+    "content": "| Dates | Topics | Notes | . | Jan 18-21 | Course OverviewDesign Principles | HW1 released | . | Jan 24-28 | Knowledge Sharing/Documenting DesignsDesign Patterns | HW1 due, HW2 released Team Formation &amp; Project Spec Released | . | Jan 31-Feb 4 | x-Driven Development +TDDTeam Dynamics |   | . | Feb 7-11 | Async programming + RESTDebugging | HW2 due, HW3 releasedProject Pitch Released | . | Feb 14-18 | Testing Intro, Unit Tests / Test Adequacy Measures |   | . | Feb 21-25 | UI Design &amp; React / Testing Bigger Things | Project Pitch Due | . | Feb 28-Mar 4 | UI Testing / Pull Requests &amp; Code Review | HW3 due, HW4 released | . | Mar 7-11 | Deployment InfrastructureContinuous Development + DevOps | Project Plan due | . | Mar 14-18 | Spring Break! |   | . | Mar 21-25 | Software ArchitectureSE for Distributed Systems | HW 4 Due | . | Marh 28-Apr 1 | Static Analysis &amp; Bug-Finders / Code Smells &amp; Refactoring; Technical Debt |   | . | Apr 4-8 | Engineering Equitable SoftwareEstimation |   | . | Apr 11-15 | Team Meetings + Advanced Topics |   | . | Apr 18-22 | Demos | Final Project Report + Implementation Due | . | Apr 25-29 | Final exam (to be scheduled by Registrar) |   | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/calendar/",
+    "relUrl": "/calendar/"
+  },"26": {
+    "doc": "Staff",
+    "title": "Staff",
+    "content": " ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/staff/",
+    "relUrl": "/staff/"
+  },"27": {
+    "doc": "Staff",
+    "title": "Office Hours",
+    "content": "All office hours will be held virtually. Links to join the TA and instructor office hours are posted in Canvas. TA Office Hours are hosted on Microsoft Teams, using the Khoury Office Hours app. Please see the user guide for information on how to log in and ask questions. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/staff/#office-hours",
+    "relUrl": "/staff/#office-hours"
+  },"28": {
+    "doc": "Staff",
+    "title": "Instructors",
+    "content": "Jonathan Bell . j.bell@northeastern.edu . Section: CS4530 Section 2 . Office Hours: Weds 2-3pm, Fri 9-10am . Adeel Bhutta . a.bhutta@northeastern.edu . Section: CS4530 Sections 1 &amp; 3 &amp; 6 . Office Hours: Mon 1:40-2:40pm, Tues 2-3pm, Thurs 1:40-2:40pm . Ferdinand Vesely . f.vesely@northeastern.edu . Section: CS4530 Section 4 . Office Hours: Fri 10:30-11:30am . Mitch Wand . wand@ccs.neu.edu . Section: CS4530 Section 5 . Office Hours: Thu 12-1pm . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/staff/#instructors",
+    "relUrl": "/staff/#instructors"
+  },"29": {
+    "doc": "Staff",
+    "title": "Teaching Assistants",
+    "content": "Aditi Shrivastava . Aishwarya Gopal Sharma . Gibby Free . Gwendolyn Payne . Harsh Hasmukh Parmar . Harsh Pandya . Kanishka Soni . Kartik Tickoo . Mihir Manek . Monil Hemang Diwan . Pooja Ramakrishnan . Rajat Manish Bhagat . Sanjana Dabbiru . Shashwat Mehul Rathod . Shubham Sonawane . Tanish Sehgal . Vaishnavi Rakeshbhai Shah . Zefeng Wang . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/staff/#teaching-assistants",
+    "relUrl": "/staff/#teaching-assistants"
+  },"30": {
+    "doc": "Code Style",
+    "title": "Code Style",
+    "content": "Programs are easier to read and to understand when they are written in a familiar style and follow standard coding conventions. Most organizations that develop software therefore require programmers to write programs that follow the organization’s preferred style and coding conventions. These conventions can be very elaborate. Many of the guidelines are, in fact, arbitrary. When you are working on a coding project with other developers, different developers often have preference for slightly different syntax, for instance: should our string litterals be enclosed by single quotes (') or double quotes (\")? Should files be indented with spaces or tabs? In TypeScript, there are often multiple ways to accomplish the same goal, for instance, you could create a new empty array with the expression const myArray = new Array(), or const myArray = []. Sometimes there is no difference between these variants except for how it reads, and other times there may be unintended consequences of making the seemingly correct but subtly wrong choice. Thankfully, it is possible to write automated checkers (and, at times, fixers) for these style violations. All code that you write for this class will be checked by ESLint, and must be free of style warnings and errors. Our ESlint rules are derived from Airbnb’s JavaScript Style Guide, ESLint’s Recommended Rules, TypeScript/ESLint Recommended Rules, React ESLint Rules and React Hooks ESLint Rules. We do not suggest studying these lists directly, instead, begin writing code naturally, and allow your IDE’s built-in style checker to report issues as you find them. The most important rules to get started are: . | Indent using spaces, not tabs; use 2 spaces for each level of indentation | Enclose all string literals with single quotes, not double | Variables must be named using lowerCamelCase, types are named using UpperCamelCase. Constants (read-only variables that are assigned a static value once and not reused) must be named using UPPER_CASE_WITH_UNDERSCORES. | The maximum line length is 100 characters | . Naming . While the linter can automatically flag names that violate camelCase rules, it can not automatically determine that a name is “good” - this is a subjective judgement call. Please consider the following when choosing names: . | Names for types are typically nouns or noun phrases. Interface names, however, might be adjectives (e.g. Serializable). | Function names are typically verbs or verb phrases | Variable and property names should be descriptive of what the variable is for, and not be named after the type of the variable (which is captured in the variable’s type declaration) | Names for properties that are private must start with a _ | . Documentation and Comments . All public properties and methods (other than getters, setters, and constructors) must be documented using JSDoc-style comments that describes what the property/method does. Example: . /** The unique identifier for this player * */ private readonly _id: string; . /** * A handler to process a remote player's subscription to updates for a room * * @param socket the Socket object that we will use to communicate with the player */ . Consider adding comments within your code to describe non-obvious behavior, or to capture why the code is written the way that it is. Do not add comments that simply restate what can already be immediately discerned by reading the code. For example, here is a useful comment: . // No valid session exists for this token, hence this client's connection should be terminated socket.disconnect(true); return; . Here is a useless comment on the same code snippet: . // Disconnect the socket socket.disconnect(true); return; . Comments are for documentation, not for keeping track of old code you are no longer using (do not submit commented-out code). ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/policies/style/",
+    "relUrl": "/policies/style/"
+  },"31": {
+    "doc": "Textbooks",
+    "title": "Textbooks",
+    "content": "This class is a survey of many sub-areas of software engineering, and an unfortunate result of this is that there is no single textbook that is appropriate for this class. However, there are several texts that have chapters that are quite relevant, and most of these books are available for free for Northeastern students through O’Reilly’s Safari Books online. To create your account, first visit this page: https://www.safaribooksonline.com/library/view/temporary-access/ and then select “Not Listed? Click Here” for institution, then enter your @northeastern.edu email address. After this first account creation, you’ll be able to log in directly to Safari Books Online with your @northeastern.edu email and no need for 2FA (hooray!). The schedule will list which chapters of which texts are relevant for each lecture: . | “Software Engineering at Google” By Titus Winters, Tom Manshreck and Hyrum Wright This book is effectively a manual that describes the software engineering practices at Google, and the rationale behind those practices | “Effective Software Testing: A Developer’s Guide” by Mauricio Aniche (Not on Safari) A focused discussion of software testing concepts, with concrete examples using popular Java testing frameworks. | “The Programmer’s Brain” by Felienne Hermans (Not on Safari) A survey of research on programming and cognition, covering topics such as how to read code more effectively and how to write code that is easier to read and share. | “Fundamentals of Software Architecture” By Mark Richards and Neal Ford An overview of software architectural patterns and their role in successful software projects. | “Refactoring: Improving the Design of Existing Code” By Martin Fowler The definitive list of “code smells” that should be avoiding in programming, matched up with “refactoring” techniques to improve that code | “Learn React with TypeScript 3” by Carl RipponA solid reference for React, describing how to get started, plus more advanced features like React’s Router and testing using Jest | “Programming TypeScript” by Boris ChernyA useful introduction to TypeScript, written assuming familiarity with programming in languages like Java, C# or python. | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/textbooks/",
+    "relUrl": "/textbooks/"
+  },"32": {
+    "doc": "Tutorials",
+    "title": "Tutorials",
+    "content": " ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/",
+    "relUrl": "/tutorials/"
+  },"33": {
+    "doc": "Installing a Development Environment",
+    "title": "Installing NodeJS",
+    "content": "Node.js is a JavaScript runtime built on Chrome’s V8 JavaScript engine. For this class, you will need Node.js version 16 (16.13.2 is the latest version at time of writing, although any 16.x shoudl work in theory). There are many ways that you can install Node.js: for instance, you can use a package manager like snap or homebrew to install it; you can download an installer directly from the Node.js website, and you can, of course, build it from source. However, due to the complexity of running different Node.js versions on the same machine, we very strongly suggest using nvm, as explained below. We recommend installing Node.js using nvm, the node version manager. When language runtimes are in active development (like Node.js is), sometimes you end up needing to have multiple versions of Node.js installed, and different projects that you work on might require different versions of Node.js. These annoyances are quite rare, but when it happens that you need to have mutliple versions of Node.js installed, it’s super handy to have your system set up already so that installing multiple versions and switching between it is easy. You can use our instructions to set up nvm even if you have previously installed Node.js. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#installing-nodejs",
+    "relUrl": "/tutorials/week1-getting-started#installing-nodejs"
+  },"34": {
+    "doc": "Installing a Development Environment",
+    "title": "Installing NodeJS with NVM for Windows",
+    "content": ". | Download nvm-setup.zip from the most recent release of nvm-windows (at time of writing this document, version 1.1.9). | . | Extract the contents of nvm-setup.zip and run the executable nvm-setup.exe. | This should open the nvm installation wizard. | . | Accept the license agreement and click next. Continue to accept the default choices for any remaining prompts, and click “install”. If you receive messages along the lines of “NodeJS version XYZ is already installed, would you like nvm to control this installation,” select “Yes”. | Upon completion, you will see the below window . | . | Open a command prompt with administrative privileges (type cmd in the windows start bar, then select “Run as administrator”). | Verify the installation, run the command nvm version . | This should display the version of nvm installed. | | . | Run the command nvm list available to display all available NodeJS versions. | . | Install the latest LTS (Long term supported, as opposed to the “development”) version of Node.js available using the command nvm install 16.13.2. | To use this version of NodeJS, run the command nvm use 16.13.2. | Now, NodeJS should be installed and ready for use. To verify the installation run the below commands: . | node -v | npm -v | | . | . Troubleshooting with VSCode: Did you follow these instructions successfully, but find a “Command not found” error when you try to run npm in VSCode? Try this: Close VSCode completely. Re-open it. In your command shell in VSCode, try again. We have noticed that if you have VSCode open while installing nvm, it is possible that VSCode will not see the new software installation until it’s closed and re-opened. You can also confirm that VSCode correctly sees the NodeJS installation by running echo %PATH% in your windows command shell in VSCode: it should include an entry similar to C:\\Program Files\\nodejs. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#installing-nodejs-with-nvm-for-windows",
+    "relUrl": "/tutorials/week1-getting-started#installing-nodejs-with-nvm-for-windows"
+  },"35": {
+    "doc": "Installing a Development Environment",
+    "title": "Installation Steps (Linux / Mac)",
+    "content": ". | Run either curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash or wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash. | Close and reopen a terminal. | Verify nvm is working by entering command -v nvm. If your terminal prints out nvm, it should be working. If you see nvm: command not found or no feedback, open a new terminal and trying again or restart from step 1. | Install the latest LTS (Long term supported, as opposed to the “development”) version of Node.js by typing nvm install 16. | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#installation-steps-linux--mac",
+    "relUrl": "/tutorials/week1-getting-started#installation-steps-linux--mac"
+  },"36": {
+    "doc": "Installing a Development Environment",
+    "title": "Verification",
+    "content": ". | Open a shell or windows powershell. | Run the command node -v . | This should print the current version of nodeJS installed (v16.x.x) | . | Run the command npm -v . | This should print the current version of npm installed (v8.x.x) | . | If you find that some other version is being used, and would like to change the default to 16, run the command nvm alias default 16 | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#verification",
+    "relUrl": "/tutorials/week1-getting-started#verification"
+  },"37": {
+    "doc": "Installing a Development Environment",
+    "title": "Installing Visual Studio Code (VSCode)",
+    "content": "Visual Studio Code is a lightweight but powerful source code editor which runs on your desktop and is available for Windows, macOS and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Java, Python, PHP, Go) and runtimes (such as .NET and Unity). VSCode also supports importing hotkey configurations from most other text editors and IDEs. Read more here. While you are required to use an IDE for this class, it is not mandatory to use VSCode: if you already are comfortable developing TypeScript or JavaScript in another suitable IDE (like IntelliJ), then you are welcome to continue to use that. However, VSCode is the “supported” option: if you struggle to get things like the linter set up correctly in VSCode, we will be happy to help you. However, we can’t provide such support for all IDEs. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#installing-visual-studio-code-vscode",
+    "relUrl": "/tutorials/week1-getting-started#installing-visual-studio-code-vscode"
+  },"38": {
+    "doc": "Installing a Development Environment",
+    "title": "Pre-requisites",
+    "content": ". | Administrative access on the host machine for software installation. | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#pre-requisites",
+    "relUrl": "/tutorials/week1-getting-started#pre-requisites"
+  },"39": {
+    "doc": "Installing a Development Environment",
+    "title": "Installation Steps (Windows / Mac)",
+    "content": ". | Download the VSCode installer from the VSCode website. | . | Run the installer to start the installation wizard for VSCode . | . | Accept the license agreement and click next. | . | Choose the installation directory of your choice and click next. | . | Click next on the select start menu folder screen. | . | Tick all check boxes on the select additional tasks menu and click next. | . | Review the settings on the the “Ready to install” screen and click Install to begin installation. | Once the installation is complete, you will see the below screen and you are ready to use VSCode. | . | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#installation-steps-windows--mac",
+    "relUrl": "/tutorials/week1-getting-started#installation-steps-windows--mac"
+  },"40": {
+    "doc": "Installing a Development Environment",
+    "title": "Installation (Linux)",
+    "content": ". | The above instructions for Windows/Mac should also work, but VSCode is also provided as a snap package | . | Install snap if you haven’t already by running sudo apt update and then sudo apt install snapd. | Install VSCode by running sudo snap install --classic code. | Open VSCode as an application on your desktop. | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#installation-linux",
+    "relUrl": "/tutorials/week1-getting-started#installation-linux"
+  },"41": {
+    "doc": "Installing a Development Environment",
+    "title": "Additional Extensions (Optional)",
+    "content": "VSCode comes with a rich set of extensions to aid in software development. Below is a list of extensions that you may find useful. | GitLens - Git Supercharged | Prettier - code formatter | vscode-icons | ESLint | Andromeda (Color theme: Andromeda Colorizer) | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#additional-extensions-optional",
+    "relUrl": "/tutorials/week1-getting-started#additional-extensions-optional"
+  },"42": {
+    "doc": "Installing a Development Environment",
+    "title": "Installing Extensions (eg. ESLint)",
+    "content": ". | Click on the extensions tab on the left in VSCode. | Search ESLint. | Click on Install. | Done! . | . | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#installing-extensions-eg-eslint",
+    "relUrl": "/tutorials/week1-getting-started#installing-extensions-eg-eslint"
+  },"43": {
+    "doc": "Installing a Development Environment",
+    "title": "Getting Started With Typescript",
+    "content": "Typescript is a superscript of JavaScript which adds type information and other features. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#getting-started-with-typescript",
+    "relUrl": "/tutorials/week1-getting-started#getting-started-with-typescript"
+  },"44": {
+    "doc": "Installing a Development Environment",
+    "title": "Pre-requisites",
+    "content": ". | NodeJS | VSCode (recommended but not required) | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#pre-requisites-1",
+    "relUrl": "/tutorials/week1-getting-started#pre-requisites-1"
+  },"45": {
+    "doc": "Installing a Development Environment",
+    "title": "Installation",
+    "content": ". | Open VSCode and press the ctrl + ~ (Tilde or back tick key) to open a terminal. | Optionally you can open a separate shell (Do not use powershell) | . | Run the command npm install -g typescript in the terminal. | Typescript should now be installed globally and accessible from the terminal. | . | Verify the installation using the command tsc -v in the terminal. (Do NOT use powershell) . | . | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#installation",
+    "relUrl": "/tutorials/week1-getting-started#installation"
+  },"46": {
+    "doc": "Installing a Development Environment",
+    "title": "Hello World",
+    "content": ". | Create a new directory and open it with VSCode. | Create a new file called hello-world.ts | Add the following code to the file: console.log('Hello, World!'); . | Open the terminal with ctrl + ~. | Ensure that you are in the same directory as hello-world.ts. | . | Run the command tsc hello-world.ts . | This will generate a JS file called hello-world.js | . | Run the file with node using the command node hello-world.js. | This will give the result below. | | . | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started#hello-world",
+    "relUrl": "/tutorials/week1-getting-started#hello-world"
+  },"47": {
+    "doc": "Installing a Development Environment",
+    "title": "Installing a Development Environment",
+    "content": "This tutorial describes the basic steps needed to set up a development environment with NodeJS, TypeScript, and VisualStudio Code. At the end of this tutorial, you should have a complete local development environment that you can use to build and test code for this class. Contents: . | Installing NodeJS | Installing Visual Studio Code | Hello, World in TypeScript | . If you run into any difficulties following any of these steps, please post (in a non-private question) on Piazza. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week1-getting-started",
+    "relUrl": "/tutorials/week1-getting-started"
+  },"48": {
+    "doc": "Week 1 - Overview and Design Principles",
+    "title": "Week 1 - Overview and Design Principles",
+    "content": "Learning Objectives: . In this first week of the course, you will learn . | a little about the scope of Software Engineering and how it differs from programming | how this course will be organized, and what will be expected from you each week. | some general principles of good program design that are important in almost any programming context | some additional principles that are specific to object-oriented programming. | . Important Dates: . | HW1 Due Jan 28 by 10pm | . Lessons: . | Introduction to this class Slides PDF, PPT | General Program Design Principles Slides PDF, PPT | Object-Oriented Principles Slides PDF, PPT | . Tutorial . | Getting Started with TypeScript | . Resources . Additional Readings: . | Class Syllabus | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/modules/week1-overview-design-principles",
+    "relUrl": "/modules/week1-overview-design-principles"
+  },"49": {
+    "doc": "Typescript Basics",
+    "title": "Typescript Basics",
+    "content": "This tutorial describes the basic concepts and syntax of typescript with code examples. Typescript is treated here as an extension of JavaScript, but it requires no prior knowledge to follow along. You can run the examples on Online Typescript Editor . Contents: . | Types in Typescript . | Boolean | Number | BigInt | String | Arrays | Tuples | Enums | Any | Unknown | . | Variable declaration in typescript | Objects | Control Flow Statements . | Equality vs Strict Equality | . | Loops | Array Functions . | ForEach | Map | Filter | Reduce | . | Functions . | Typing the function | Invoking the function | Optional and Default Parameters | Rest Parameters | Functions as Constructors | Arrow Functions | Function Overloads | . | Classes . | Creating a class | Creating an abstract class | . | Type Aliases | Interfaces | Custom types | Generics | Modules | Object oriented programming concepts using typescript . | Inheritance | Polymorphism | Abstraction | Encapsulation | . | General Guidelines | . Typescript is a superset of JavaScript. Thus, all JavaScript code is valid Typescript code. Typescript introduces concepts of optional typing, modules, and few additional features to Javascript. Let us begin by extending JavaScript to use the features of Typescript and primitive types. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics",
+    "relUrl": "/tutorials/week2-typescript-basics"
+  },"50": {
+    "doc": "Typescript Basics",
+    "title": "Types in typescript",
+    "content": "Boolean . The boolean type has two values: true and false. Example: . let a = true // boolean var b = false // boolean const c = true // true let d: boolean = true // boolean let e: true = true // true . | Usage: You can compare them (with ==, ===, ||, &amp;&amp;, and ?), negate them (with !). | . Number . Number is the set of all numbers: integers, floats, positives, negatives, Infinity, NaN. Example: . var b = Infinity * 0.10 // number const c = 5678 // 5678 let d = a &lt; b // boolean let e: number = 100 // number let f: 26.218 = 26.218 . | Usage: Numbers can do things, like addition (+), subtraction (-), modulo (%), and comparison (&lt;). When working with long numbers, use numeric separators to make those numbers easier to read. | . BigInt . The bigint type is the set of all BigInts, and supports things like addition (+), subtraction (-), multiplication (*), division (/), and comparison (&lt;). Example: . let a = 1234n // bigint const b = 5678n // 5678n var c = a + b // bigint let d = a &lt; 1235 // boolean let e = 88.5n // Error TS1353: A bigint literal must be an integer. let f: bigint = 100n // bigint let g: 100n = 100n . | Usage: It lets you work with large integers without running into rounding errors. While the number type can only represent whole numbers it can hold numbers larger than 253 – 1. | . String . String is the set of all strings and the things you can do with them like concatenate (+), slice (.slice),etc. Example: . let a: any = 666 // any let b: any = ['danger'] // any let c = a + b // any . | Usage: Any functionality that requires the functionality of a string of characters. Here are a couple of string operations: | . charAt() : This method returns the character from the specified index. Characters in a string are indexed from left to right. The index of the first character is 0, and the index of the last character in a string, called stringName, is stringName.length – 1. Syntax: . string.charAt(index) . slice() : This method extracts a section of a string and returns a new string. Syntax: . string.slice( beginslice [, endSlice]) . split() : This method splits a String object into an array of strings by separating the string into substrings. Syntax: . string.split([separator][, limit]) . concat(): This method adds two or more strings and returns a new single string. Syntax: . string.concat(string2, string3[, ..., stringN]) . indexOf(): This method returns the index within the calling String object of the first occurrence of the specified value, starting the search at index or -1 if the value is not found. Syntax: . string.indexOf(searchValue[, fromIndex]) . Arrays . Like in JavaScript, TypeScript arrays are special kinds of objects that support things like concatenation, pushing, searching, and slicing. Arrays are iterable Objects with the keys as numbers. Example: . let a = [1, 2, 3] // number[] var b = ['a', 'b'] // string[] let c: string[] = ['a'] // string[] let d = [1, 'a'] // (string | number)[] const e = [2, 'b'] // (string | number)[] let f = ['red'] f.push('blue') let g = [] // any[] g.push(1) // number[] g.push('red') // (string | number)[] let h: number[] = [] // number[] h.push(1) // number[] . Tuples . Tuples are subtypes of array. They’re a special way to type arrays that have fixed lengths, where the values at each index have specific, known types. Unlike most other types, tuples have to be explicitly typed when you declare them. Example: . let a: [number] = [1] // A tuple of [first name, last name, birth year] let b: [string, string, number] = ['malcolm', 'gladwell', 1963] . | Usage: In TypeScript Tuples support optional elements too. Just like in object types, ? means “optional”. Tuples also support rest elements, which you can use to type tuples with minimum lengths. Not only do tuple types safely encode heterogeneous lists, but they also capture the length of the list they type. | . Enums . Enums are a way to enumerate the possible values for a type. They are unordered data structures that map keys to values. Example: . enum Language { English, Spanish, Russian } . | Usage: There are two kinds of enums: enums that map from strings to strings, and enums that map from strings to numbers. Use it when you wish to provide flexibility making it easier to express and document intentions and use cases or when you want to save compile-time and runtime with inline code. | . Any . The any data type is the super type of all types in TypeScript. It denotes a dynamic type. Using the any type is equivalent to opting out of type checking for a variable. Example: . let a: any = 666 // any let b: any = ['danger'] // any let c = a + b // any . | Usage: In TypeScript everything needs to have a type at compile time, and any is the default type when you (the programmer) and TypeScript (the typechecker) can’t figure out what type something is. It’s a last resort type, and you should avoid it when possible. | . Unknown . If any is the Godfather, then unknown is Keanu Reeves as undercover FBI agent Johnny Utah in Point Break: laid back, fits right in with the bad guys, but deep down has a respect for the law and is on the side of the good guys. You can compare unknown values (with ==, ===, &amp;&amp;, and ?), and refine them (like you can any other type) with JavaScript’s typeof and instanceof operators. Example: . let a: unknown = 30 // unknown let b = a === 123 // boolean . | Usage: For the few cases where you have a value whose type you really don’t know ahead of time, don’t use any, and instead reach for unknown. Like any, it represents any value, but TypeScript won’t let you use an unknown type until you refine it by checking what it is. | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#types-in-typescript",
+    "relUrl": "/tutorials/week2-typescript-basics#types-in-typescript"
+  },"51": {
+    "doc": "Typescript Basics",
+    "title": "Variable declaration in typescript",
+    "content": "Variables can be declared in Typescript using one of 3 keywords: . | var: var declarations are accessible anywhere within their containing function, module, namespace, or global scope - all which we’ll go over later on - regardless of the containing block. Some people call this var-scoping or function-scoping. Parameters are also function scoped. | let: When a variable is declared using let, it uses what some call lexical-scoping or block-scoping. Unlike variables declared with var whose scopes leak out to their containing function, block-scoped variables are not visible outside of their nearest containing block. | const: They are like let declarations but, as their name implies, their value cannot be changed once they are bound. In other words, they have the same scoping rules as let, but you can’t re-assign to them. | . The syntax of declarations is as below: . var &lt;name&gt;: &lt;type&gt; = &lt;value&gt;; let &lt;name&gt;: &lt;type&gt; = &lt;value&gt;; const &lt;name&gt;: &lt;type&gt; = &lt;value&gt;; . Example: . let num: number = 1; const PI: number = 3.14; let x: string = \"This is a string\"; const t: boolean = true; const f: boolean = false; let uninitialized: any; . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#variable-declaration-in-typescript",
+    "relUrl": "/tutorials/week2-typescript-basics#variable-declaration-in-typescript"
+  },"52": {
+    "doc": "Typescript Basics",
+    "title": "Objects",
+    "content": ". | Objects are similar to dictionaries with key-value pairs. | Arrays are iterable Objects with the keys as numbers. | . Examples: . const myObj: any = { key1: 'value1', key2: 'value2' }; console.log(myObj.key1); // prints 'value1' . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#objects",
+    "relUrl": "/tutorials/week2-typescript-basics#objects"
+  },"53": {
+    "doc": "Typescript Basics",
+    "title": "Control Flow Statements",
+    "content": "Typescript contains the following control flow statements: . | If-Else | Switch | Ternary operator: Shorthand for if-else which returns a value. | . If condition syntax: . if(condition) { // executed when condition is true } if(condition) { // executed when condition is true } else { // executed when condition is false } if(condition) { // executed when condition is true } else if(condition2) { // checked only if condition is false // executed when condition2 is true } else { // executed when all conditions in the if-elseif ladder are false. } . Switch case syntax: . switch (variable) { case &lt;case1&gt;: // executed when value of variable matches &lt;case1&gt; break; // Break is required to prevent all subsequent cases from executing case &lt;case2&gt;: // executed when value of variable matches &lt;case1&gt; break; // Break is required to prevent all subsequent cases from executing default: // executed if variable does not match any prior cases } . Ternary Syntax: . let x = (condition) ? /* Executed when condition is true */ : /*Executed when condition is false*/; . Examples: . const str: string = \"ABCD\"; if(str === \"ABCD\") { console.log(\"it was true\"); } else { console.log(\"it was false\"); } switch (str) { case \"ABCD\": console.log('It was ABCD'); break; case \"WXYZ\": console.log('It was WXYZ'); break; default: console.log('It was something completely different') } let y: string = (str.includes(\"A\")) ? \"The string contains A\" : \"The string does not contain A\"; // y now contains \"The string contains A\" . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#control-flow-statements",
+    "relUrl": "/tutorials/week2-typescript-basics#control-flow-statements"
+  },"54": {
+    "doc": "Typescript Basics",
+    "title": "Equality vs Strict Equality",
+    "content": "Typescript/JavaScript contain 2 equality operators: . | ==: Compares only the value of entities being compared. | ===: Compares the type and value of entities being compared. | . Example: . if(0 == '0') { } // Evaluates to true despite comparing string to number. if(0 === '0') { } // Evaluated to false because types are different. We recommend using strict equality (===) in all cases, and this recommendation is enforced by our linter. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#equality-vs-strict-equality",
+    "relUrl": "/tutorials/week2-typescript-basics#equality-vs-strict-equality"
+  },"55": {
+    "doc": "Typescript Basics",
+    "title": "Loops",
+    "content": "Typescript contains the following loops: . | For | While | Do-while | . Examples: . for(let i: number = 0; i &lt; 10; i++) { } while(condition) { } do { } while(condition) . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#loops",
+    "relUrl": "/tutorials/week2-typescript-basics#loops"
+  },"56": {
+    "doc": "Typescript Basics",
+    "title": "Array Functions",
+    "content": "ForEach, Map, reduce, and filter are all array methods in JavaScript. Each one will iterate over an array and perform a transformation or computation. Each will return a new array based on the result of the function. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#array-functions",
+    "relUrl": "/tutorials/week2-typescript-basics#array-functions"
+  },"57": {
+    "doc": "Typescript Basics",
+    "title": "ForEach",
+    "content": "forEach() method calls a function for each element in the array. It returns the resultant array. Syntax . array.forEach(callback[, thisObject]); . Example . let num = [7, 8, 9]; num.forEach(function (value) { console.log(value); }); . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#foreach",
+    "relUrl": "/tutorials/week2-typescript-basics#foreach"
+  },"58": {
+    "doc": "Typescript Basics",
+    "title": "Map",
+    "content": "It is an array function that transforms the array according to the applied function and returns the updated array. It works on each element of an array. Syntax . array.map(callback[,object]) . callback - It is a function that provides an element of the new Array from an element of the current one. object - object to use as this when executing callback. Return Type - List . Examples . //Calculate cube of each element with the help of map. function cube(n){ return n*n*n; } var arr=new Array(1,2,3,4) var newArr=arr.map(cube); console.log(newArr) // Output : [1,8,27,64] . In the above example, a function called “cube” is created and then is passed as a callback function into map(). ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#map",
+    "relUrl": "/tutorials/week2-typescript-basics#map"
+  },"59": {
+    "doc": "Typescript Basics",
+    "title": "Reduce",
+    "content": "It also works on a callback for each element of an array. It reduces the result of this callback function from one array element to the other. Syntax . array.reduce(callback[,initalValue]) . callback - this parameter is the function to execute on each value in the array. intitalValue - this parameter is the object to use as the first argument of the first call of the callback. Examples . //To calculate product of every element of an array, var arr = new Array (1,2,3,4,5) var val = arr.reduce(function(a,b){ return a*b; }); //output =&gt; 120 . Calculate the total salary from a list of object, then you will use the reduce() like, . var employees = [ { id: 20, name: 'Ajay', salary:30000 }, { id: 24, name: 'Vijay', salary:35000 }, { id: 56, name: 'Rahul', salary:32000 }, { id: 88, name: 'Raman', salary:38000 } ]; var totalSalary= employees .reduce(function (total, record) { return total + record.salary; }, 0); //It will return the total salary of all the employees. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#reduce",
+    "relUrl": "/tutorials/week2-typescript-basics#reduce"
+  },"60": {
+    "doc": "Typescript Basics",
+    "title": "Filter",
+    "content": "As the name suggests it can filter out the data/array elements on the basis of condition and return the result as a list. Basically, this function pushes the current element into a new array when the callback functions return true. Syntax . array.map(callback[,object]) . callback - it is a function that provides an element of the new Array from an element of the current one. object - object to use as this when executing callback. Return Type: List . Examples . //Calculate a list of even elements from an array : arr = new Array(1, 2, 3, 6, 5, 4) var newArr = arr.filter(function(record) { return record % 2 == 0; }); // output =&gt; [2,6,4] . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#filter",
+    "relUrl": "/tutorials/week2-typescript-basics#filter"
+  },"61": {
+    "doc": "Typescript Basics",
+    "title": "Functions",
+    "content": ". | Functions usually “take in” data, process it, and “return” a result. Remember one function/method one job! . | There is a lot you can do with functions in JavaScript like assign them to variables, pass them to other functions, return them from functions, assign them to objects and prototypes, write properties to them, read those properties back, and so on, and TypeScript models all of those things with its rich type system, which we just learnt. | Typescript enables us to set the types for our function parameters and our return type. | Functions in Typescript are defined as below: . function functionName(argument1: &lt;type&gt;, defaultArgument: &lt;type&gt; = value, optionalArgument?: &lt;type&gt;): &lt;return type&gt; { // Function body } . | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#functions",
+    "relUrl": "/tutorials/week2-typescript-basics#functions"
+  },"62": {
+    "doc": "Typescript Basics",
+    "title": "Typing the function",
+    "content": "A simple function in javascript would look like this: . // Named function function add(a, b) { return a + b; } . Now, let’s add types to our simple examples above: . function add(a: number, b: number): number { return a + b; } . You will usually explicitly annotate function parameters (a and b in this example)—TypeScript will always infer types throughout the body of your function, but in most cases it won’t infer types for your parameters. The return type is inferred, but it’s a good practice to explicitly annotate it. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#typing-the-function",
+    "relUrl": "/tutorials/week2-typescript-basics#typing-the-function"
+  },"63": {
+    "doc": "Typescript Basics",
+    "title": "Invoking the function",
+    "content": "When you invoke a function in TypeScript, you don’t need to provide any additional type information—just pass in some arguments, and TypeScript will go to work checking that your arguments are compatible with the types of your function’s parameters: . add(1, 2); // evaluates to 3 . Of course, if you forgot an argument, or passed an argument of the wrong type, TypeScript will be quick to point it out: . add(1); // Error TS2554: Expected 2 arguments, but got 1. add(1, 'a'); // Error TS2345: Argument of type '\"a\"' is not assignable // to parameter of type 'number'. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#invoking-the-function",
+    "relUrl": "/tutorials/week2-typescript-basics#invoking-the-function"
+  },"64": {
+    "doc": "Typescript Basics",
+    "title": "Optional and Default Parameters",
+    "content": "Like in object and tuple types, you can use ? to mark parameters as optional. When declaring your function’s parameters, required parameters have to come first, followed by optional parameters: . function log(message: string, userId?: string) { let time = new Date().toLocaleTimeString() console.log(time, message, userId || 'Not signed in') } log('Page loaded') // Logs \"12:38:31 PM Page loaded Not signed in\" log('User signed in', 'da763be') // Logs \"12:38:31 PM User signed in da763be\" . You can provide default values for optional parameters. Semantically it’s similar to making a parameter optional, in that callers no longer have to pass it in (a difference is that default parameters don’t have to be at the end of your list of parameters, while optional parameters do). For example, we can rewrite log as: . function log(message: string, userId = 'Not signed in') { let time = new Date().toISOString() console.log(time, message, userId) } log('User clicked on a button', 'da763be') log('User signed out') . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#optional-and-default-parameters",
+    "relUrl": "/tutorials/week2-typescript-basics#optional-and-default-parameters"
+  },"65": {
+    "doc": "Typescript Basics",
+    "title": "Rest Parameters",
+    "content": "If a function takes a list of arguments, you can of course simply pass the list in as an array: . function sum(numbers: number[]): number { return numbers.reduce((total, n) =&gt; total + n, 0); } sum([1, 2, 3]); // evaluates to 6 . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#rest-parameters",
+    "relUrl": "/tutorials/week2-typescript-basics#rest-parameters"
+  },"66": {
+    "doc": "Typescript Basics",
+    "title": "Functions as Constructors",
+    "content": "In Typescript/Javascript, Functions can be used as constructors for creating objects. This is similar to classes, but not quite the same. Examples: . function Person(firstName: string, lastName: string): void { this.firstName = firstName; this.lastName = lastName; this.getFullName = function(): string { return this.firstName + ' ' + this.lastName; } } const person1 = new Person('first', 'last'); console.log(person1.getFullName()); // Returns 'first last'. | Constructors can’t have type parameters - these belong on the outer class declaration . | Constructors can’t have return type annotations - the class instance type is always what’s returned ```ts class Point { x: number; y: number; . | . // Normal signature with defaults constructor(x = 0, y = 0) { this.x = x; this.y = y; } } . ## Arrow Functions Arrow Functions (also called fat arrow functions) are functions which have lexical 'this' and 'arguments'. This are especially useful in class methods to preserve the context when using higher order functions. Examples: ```ts let sum = (x: number, y: number): number =&gt; { return x + y; } sum(10, 20); //returns 30 . In the above example, sum is an arrow function. (x:number, y:number) denotes the parameter types, :number specifies the return type. The fat arrow =&gt; separates the function parameters and the function body. The right side of =&gt; can contain one or more code statements. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#functions-as-constructors",
+    "relUrl": "/tutorials/week2-typescript-basics#functions-as-constructors"
+  },"67": {
+    "doc": "Typescript Basics",
+    "title": "Function Overloads",
+    "content": "In TypeScript, we can specify a function that can be called in different ways by writing overload signatures. To do this, write some number of function signatures (usually two or more), followed by the body of the function: . //function makeDate() with one parameter function makeDate(timestamp: number): Date; //function makeDate() with three parameters function makeDate(m: number, d: number, y: number): Date; //function makeDate() with one parameter and 2 default parameters function makeDate(mOrTimestamp: number, d?: number, y?: number): Date { if (d !== undefined &amp;&amp; y !== undefined) { return new Date(y, mOrTimestamp, d); } else { return new Date(mOrTimestamp); } } const d1 = makeDate(12345678); const d2 = makeDate(5, 5, 5); const d3 = makeDate(1, 3); //No overload expects 2 arguments, but overloads do exist that expect either 1 or 3 arguments. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#function-overloads",
+    "relUrl": "/tutorials/week2-typescript-basics#function-overloads"
+  },"68": {
+    "doc": "Typescript Basics",
+    "title": "Classes",
+    "content": "Classes are blueprints for creating objects. | They can contain properties, methods, and a constructor. | All members of a class can have an access modifier: public, protected, private. | Members can also be static (shared across all instances of the class) and final (immutable). | Class properties may have getters and setters. | Classes can extend other classes. | Classes can implement interfaces. | . Creating a Class . A class definition can include the following: . | Fields − A field is any variable declared in a class. Fields represent data pertaining to objects | Constructors − Responsible for allocating memory for the objects of the class | Functions − Functions represent actions an object can take. They are also at times referred to as methods | . Examples: . class Person { private firstName: string = ''; protected middleName: string; public lastName: string = ''; private static final NeverGonnaGiveYouUp: any; protected static final NeverGonnaLetYouDown: any; public static final isRickRolled: boolean = true; constructor() { // I execute when you call new Person(). // No access modifier === public by default. // Make me private if implementing a singleton. } public anyoneCanCallMe(): void { this.childClassesCanCallMe(); } protected childClassesCanCallMe(): void { this.onlyPersonCanCallMe(); } private onlyAccessibleInsidePerson(): void { // I lied, anyone can call me if you know how. // Welcome to JavaScript :p } public get firstName(): string { return this.firstName; } public set firstName(firstName: string): void { this.firstName = firstName; } } const person = Person(); person.firstName = 'first'; console.log(person.firstName); person.anyoneCanCallMe(); class SpecialPerson extends Person { // I contain everything person has, and can extend/override it. constructor() { super() // I call the constructor for Person. } } . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#classes",
+    "relUrl": "/tutorials/week2-typescript-basics#classes"
+  },"69": {
+    "doc": "Typescript Basics",
+    "title": "Creating an abstract class",
+    "content": ". | Define an abstract class in Typescript using the abstract keyword. Abstract classes are mainly for inheritance where other classes may derive from them. We cannot create an instance of an abstract class. | An abstract class typically includes one or more abstract methods or property declarations. The class which extends the abstract class must define all the abstract methods. | . Example: . abstract class Person { abstract name: string; display(): void{ console.log(this.name); } } class Employee extends Person { name: string; empCode: number; constructor(name: string, code: number) { super(); // must call super() this.empCode = code; this.name = name; } } let emp: Person = new Employee(\"James\", 100); emp.display(); //James . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#creating-an-abstract-class",
+    "relUrl": "/tutorials/week2-typescript-basics#creating-an-abstract-class"
+  },"70": {
+    "doc": "Typescript Basics",
+    "title": "Type Aliases",
+    "content": "We’ve been using object types and union types by writing them directly in type annotations. This is convenient, but it’s common to want to use the same type more than once and refer to it by a single name. A type alias is exactly that - a name for any type. The syntax for a type alias is: . type Point = { x: number; y: number; }; function printCoord(pt: Point) { console.log(\"The coordinate's x value is \" + pt.x); console.log(\"The coordinate's y value is \" + pt.y); } printCoord({ x: 100, y: 100 }); . You can actually use a type alias to give a name to any type at all, not just an object type. For example, a type alias can name a union type: . type ID = number | string; . Note that aliases are only aliases - you cannot use type aliases to create different/distinct “versions” of the same type. When you use the alias, it’s exactly as if you had written the aliased type. In other words, this code might look illegal, but is OK according to TypeScript because both types are aliases for the same type: . type UserInputSanitizedString = string; function sanitizeInput(str: string): UserInputSanitizedString { return sanitize(str); } // Create a sanitized input let userInput = sanitizeInput(getInput()); // Can still be re-assigned with a string though userInput = \"new input\"; . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#type-aliases",
+    "relUrl": "/tutorials/week2-typescript-basics#type-aliases"
+  },"71": {
+    "doc": "Typescript Basics",
+    "title": "Interfaces",
+    "content": "Interfaces are used to define contracts for interaction with external entities. If an interface has a property/method, an Object/Class which implements it must have it. Interfaces can be used to define custom types for Objects in Typescript. Examples: . //Interface IPerson respresents a person by attributes firstName and lastName and a method to getFullName() interface IPerson { firstName: string; lastName: string; getFullName(): string; } //Class Person implements interface Iperson. Person class must contains ll the attributes and methods of interface. class Person implements IPerson { public firstName: string = ''; public lastName: string = ''; public getFullName(): string { return this.firstName + ' ' + this.lastName; } // It can contain any other properties/methods but must contain those in the interface. } const person: IPerson = new Person(); . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#interfaces",
+    "relUrl": "/tutorials/week2-typescript-basics#interfaces"
+  },"72": {
+    "doc": "Typescript Basics",
+    "title": "Custom types",
+    "content": ". | For complicated types (usually required for Objects), it is recommended to use an interface. | Additionally, typescript contain the ‘type’ keyword which can be used to create new types. | This is generally used when a union of different types is required. | . Examples: . interface IStudent { name: string; age: number; studentID: number; gender: string; isEnrolled: boolean; } const student: IStudent = { name: 'name', age: 20, studentID: 111111111, gender: 'hidden' isEnrolled: true; }; type StringOrNumber = string | number; let x = 1; x = 'some string'; . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#custom-types",
+    "relUrl": "/tutorials/week2-typescript-basics#custom-types"
+  },"73": {
+    "doc": "Typescript Basics",
+    "title": "Generics",
+    "content": ". | Generics allow us to pass different types to a function/class making it more generalized. | This will be especially useful when working with http requests. | . Examples: . function myFunc&lt;T&gt;(data: T): T { console.log(data); return data } let x: string = myFunc&lt;string&gt;('some string'); let y: number = myFunc&lt;number&gt;(5); class myClass&lt;T&gt; { } interface IMyInterface&lt;T&gt; { } . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#generics",
+    "relUrl": "/tutorials/week2-typescript-basics#generics"
+  },"74": {
+    "doc": "Typescript Basics",
+    "title": "Modules",
+    "content": "A Module in typescript is defined by using the ‘Import’ or ‘Export’ keywords within a file. Variables declared in a module are scoped locally and are not added to the global scope. | Export makes the variables and functions from a file visible outside it. | Import allows use to use variables and functions exported by another file. | . Examples: . // file1.ts export const someVar: string = 'Variables can be exported too.'; export default function add(x: number, y: number): number { return x + y; } export function subtract(x: number, y: number): number { return x - y; } function multiply(): void { throw new Error(); } // file2.ts import add from './file1'; // curly braces are not required if export default is used. // There can be only 1 export default in a while. Use it if file has only 1 export. import { subtract } from './file1'; add(1, 2); subtract(2, 1); // multiply cannot be imported. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#modules",
+    "relUrl": "/tutorials/week2-typescript-basics#modules"
+  },"75": {
+    "doc": "Typescript Basics",
+    "title": "Object oriented programming concepts using typescript",
+    "content": "Object Oriented Programming or OOP is a programming paradigm that has four principles which are: . | Inheritance | Polymorphism | Abstraction | Encapsulation | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#object-oriented-programming-concepts-using-typescript",
+    "relUrl": "/tutorials/week2-typescript-basics#object-oriented-programming-concepts-using-typescript"
+  },"76": {
+    "doc": "Typescript Basics",
+    "title": "Inheritance",
+    "content": "TypeScript supports the concept of Inheritance. Inheritance is the ability of a program to create new classes from an existing class. The class that is extended to create newer classes is called the parent class/super class. The newly created classes are called the child/sub classes. A class inherits from another class using the ‘extends’ keyword. Child classes inherit all properties and methods except private members and constructors from the parent class. However, TypeScript doesn’t support multiple inheritance. Syntax: . class child_class_name extends parent_class_name . Example: . //Parent class Shape class Shape { Area:number constructor(a:number) { this.Area = a } } //Child class Circle that inherits properties of Shape class Circle extends Shape { disp():void { console.log(\"Area of the circle: \"+this.Area) } } var obj = new Circle(223); obj.disp() . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#inheritance",
+    "relUrl": "/tutorials/week2-typescript-basics#inheritance"
+  },"77": {
+    "doc": "Typescript Basics",
+    "title": "Polymorphism",
+    "content": "When multiple classes inherit from a parent and override the same functionality, the result is polymorphism. Each of those child classes now implements a property or method, but they each may have their own way of performing that implementation. lternatively, one child class might override the parent’s members while another child doesn’t but just accepts the parent class’s implementation instead. This also demonstrates polymorphic behavior, since those behaviors are different between the siblings. class CheckingAccount { open(initialAmount: number) { // code to open account and save in database } } class BusinessCheckingAccount extends CheckingAccount { open(initialAmount: number) { if (initialAmount &lt; 1000) { throw new Error(\"Business accounts must have an initial deposit of 1.000 Euros\") } super.open(initialAmount); } } class PersonalCheckingAccount extends CheckingAccount { open(initialAmount: number) { if (initialAmount &lt;= 0) { throw new Error(\"Personal accounts must have an initial deposit of more than zero Euros\") } super.open(initialAmount); } } . In the above code sample shows, the two child classes have different business rules to implement when it comes to opening an account – mainly different opening balances. Because both children have a method to open the account but both children choose to do it differently means the behavior is polymorphic. To achieve polymorphism, inherit from a base class, then override methods and write implementation code in them. In addition to overriding methods, you can overload methods to achieve polymorphism. Overloaded methods are methods that have different signatures (i.e., different data types or number of arguments) with the same name. However, in TypeScript, methods aren’t overloaded by simply modifying the types or number of arguments like in some other languages. To create an overload in TypeScript, you can either add optional arguments to a method, or overload function declarations in an interface and implement the interface. ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#polymorphism",
+    "relUrl": "/tutorials/week2-typescript-basics#polymorphism"
+  },"78": {
+    "doc": "Typescript Basics",
+    "title": "Abstraction",
+    "content": "Abstraction is a way to model objects in a system that creates a separation of duties between class or type and the code that inherits it. A developer creates a type, i.e., a class or interface, and that type specifies what the calling code should implement, but not how. So it’s the job of the abstract type to define what needs to be done, but up to the consuming types to actually do those things. To enforce abstraction, inherit or implement from abstract classes and interfaces. For example, some bank accounts have fees. You can create a Fee interface that defines a method for charging a fee. Fees don’t apply to all types of accounts, so it’s best to create an interface that can be applied to specific classes anywhere in the inheritance hierarchy. A checking account might charge fees, where its parent and sibling, the generic bank account and savings accounts might not. interface Fee { chargeFee(amount: number ); } // parent BankAccount and sibling SavingsAccount do not implement Fee interface class BankAccount { ... } class SavingsAccount extends BankAccount { ... } // checking implements Fee class CheckingAccount extends BankAccount implements Fee { chargeFee(amount: number) {} } . Children classes inherit interface members that have been implemented in their parent, so if a BusinessChecking account has inherited from the CheckingAccount class, then it inherits that implementation. // BusinessChecking inherits CheckingAccount and therefore Fee class BusinessChecking extends CheckingAccount { … } // Code that uses BusinessChecking can call chargeFee function CalculateMonthlyStatements() { let businessChecking = new BusinessChecking(); businessChecking.chargeFee(100); } . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#abstraction",
+    "relUrl": "/tutorials/week2-typescript-basics#abstraction"
+  },"79": {
+    "doc": "Typescript Basics",
+    "title": "Encapsulation",
+    "content": "Encapsulation is a key part of Object Oriented Programming that is a way to structure code so that a certain block of code has specific access points for external code. The term for this is “visibility” or “accessibility”. Visibility defines what code from one method, property, or class can call code in another method, property, or class. In TypeScript, we enforce encapsulation with methods and properties that only allow access to data that we control. The Withdraw method below does that by doing the calculation and updating the class level _balance field. The Balance property then returns the private _balance field to the calling code. Withdraw(amount: number): boolean { if (this._balance &gt; amount) { this._balance -= amount return true; } return false; } private _balance: number; get Balance(): number { return this._balance; } . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#encapsulation",
+    "relUrl": "/tutorials/week2-typescript-basics#encapsulation"
+  },"80": {
+    "doc": "Typescript Basics",
+    "title": "General Guidelines",
+    "content": ". | Naming conventions . | use kebab-case for file names. | Use camelCase for variable and function names. | Use PascalCase for Class and constructor function names. | . | Prefer descriptive names over random letters. | Although typing is optional in typescript, it is not optional for this course. | Always use strict equality. | Use a linter. (as specified on course website) | Use a prettifier. (If the linter doesn’t do it already) | Use general coding guidelines as discussed in Week1. | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/tutorials/week2-typescript-basics#general-guidelines",
+    "relUrl": "/tutorials/week2-typescript-basics#general-guidelines"
+  },"81": {
+    "doc": "Week 2 - Knowledge Sharing & Documenting Designs",
+    "title": "Week 2 - Knowledge Sharing & Documenting Designs",
+    "content": "Learning Objectives: . When you design a program or system, you will always need to express that design in ways that can be shared with others. The goal of this week’s lessons is to provide you with some basic vocabulary for talking about your design. We will talk about designs at three scales: . | The Architectural Scale, which describes the overall structure of your program . | The Interaction Scale, which describes the ways in which the objects in your program interact with each other. | The Object Scale, which describes the structure, properties, and methods of individual objects. | . Important Dates: . | HW1 Due Jan 28 by 10pm | . Lessons: . | Three Scales of Design Slides PDF, PPT | The Architectural Scale Slides PDF, PPT | The Interaction Scale Slides PDF, PPT | The Object Scale Slides PDF, PPT | . Resources . | Code Examples for Lessons 2.1-2.4 | . Additional Readings: . | Design Patterns | . ",
+    "url": "https://neu-se.github.io/CS4530-Spring-2022/modules/week2-knowledge-sharing-design-doc",
+    "relUrl": "/modules/week2-knowledge-sharing-design-doc"
+  }
+}
